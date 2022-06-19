@@ -11,14 +11,22 @@
 		8E75277B285E2A2800970B33 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E75277A285E2A2800970B33 /* ContentView.swift */; };
 		8E75277D285E2A2B00970B33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E75277C285E2A2B00970B33 /* Assets.xcassets */; };
 		8E752780285E2A2B00970B33 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E75277F285E2A2B00970B33 /* Preview Assets.xcassets */; };
+		8E752788285E2D9300970B33 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E752787285E2D9300970B33 /* Color.swift */; };
+		8E75278E285E38E900970B33 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E75278D285E38E900970B33 /* HomeView.swift */; };
+		8E752792285E3C1500970B33 /* CircleViewButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E752791285E3C1500970B33 /* CircleViewButton.swift */; };
+		8E752794285EE0B200970B33 /* CircleAnimationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E752793285EE0B200970B33 /* CircleAnimationButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8E752775285E2A2800970B33 /* SwiftuiCrypto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftuiCrypto.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E752775285E2A2800970B33 /* Crypto Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Crypto Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E752778285E2A2800970B33 /* SwiftuiCryptoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftuiCryptoApp.swift; sourceTree = "<group>"; };
 		8E75277A285E2A2800970B33 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8E75277C285E2A2B00970B33 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E75277F285E2A2B00970B33 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8E752787285E2D9300970B33 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		8E75278D285E38E900970B33 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		8E752791285E3C1500970B33 /* CircleViewButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleViewButton.swift; sourceTree = "<group>"; };
+		8E752793285EE0B200970B33 /* CircleAnimationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleAnimationButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,7 +51,7 @@
 		8E752776285E2A2800970B33 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8E752775285E2A2800970B33 /* SwiftuiCrypto.app */,
+				8E752775285E2A2800970B33 /* Crypto Tracker.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -51,6 +59,8 @@
 		8E752777285E2A2800970B33 /* SwiftuiCrypto */ = {
 			isa = PBXGroup;
 			children = (
+				8E752789285E38B000970B33 /* Core */,
+				8E752786285E2D8000970B33 /* Extensions */,
 				8E752778285E2A2800970B33 /* SwiftuiCryptoApp.swift */,
 				8E75277A285E2A2800970B33 /* ContentView.swift */,
 				8E75277C285E2A2B00970B33 /* Assets.xcassets */,
@@ -65,6 +75,64 @@
 				8E75277F285E2A2B00970B33 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8E752786285E2D8000970B33 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8E752787285E2D9300970B33 /* Color.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8E752789285E38B000970B33 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				8E75278F285E3BEF00970B33 /* Compoonents */,
+				8E75278A285E38C200970B33 /* Home */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		8E75278A285E38C200970B33 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				8E75278C285E38D300970B33 /* ViewModels */,
+				8E75278B285E38C900970B33 /* Views */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		8E75278B285E38C900970B33 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8E75278D285E38E900970B33 /* HomeView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8E75278C285E38D300970B33 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		8E75278F285E3BEF00970B33 /* Compoonents */ = {
+			isa = PBXGroup;
+			children = (
+				8E752790285E3C0200970B33 /* CircleButton */,
+			);
+			path = Compoonents;
+			sourceTree = "<group>";
+		};
+		8E752790285E3C0200970B33 /* CircleButton */ = {
+			isa = PBXGroup;
+			children = (
+				8E752791285E3C1500970B33 /* CircleViewButton.swift */,
+				8E752793285EE0B200970B33 /* CircleAnimationButton.swift */,
+			);
+			path = CircleButton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -84,7 +152,7 @@
 			);
 			name = SwiftuiCrypto;
 			productName = SwiftuiCrypto;
-			productReference = 8E752775285E2A2800970B33 /* SwiftuiCrypto.app */;
+			productReference = 8E752775285E2A2800970B33 /* Crypto Tracker.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -138,7 +206,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E75277B285E2A2800970B33 /* ContentView.swift in Sources */,
+				8E75278E285E38E900970B33 /* HomeView.swift in Sources */,
+				8E752794285EE0B200970B33 /* CircleAnimationButton.swift in Sources */,
 				8E752779285E2A2800970B33 /* SwiftuiCryptoApp.swift in Sources */,
+				8E752788285E2D9300970B33 /* Color.swift in Sources */,
+				8E752792285E3C1500970B33 /* CircleViewButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +345,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -281,7 +354,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = personal.SwiftuiCrypto;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Crypto Tracker";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -302,6 +375,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -310,7 +384,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = personal.SwiftuiCrypto;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Crypto Tracker";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
