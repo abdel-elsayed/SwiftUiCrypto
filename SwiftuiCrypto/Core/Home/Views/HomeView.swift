@@ -2,7 +2,7 @@
 //  HomeView.swift
 //  SwiftuiCrypto
 //
-//  Created by Abdelrahman Elsayed on 6/18/22.
+//  Created by Abdelrahman Elsayed on 6/18/22
 //
 
 import SwiftUI
