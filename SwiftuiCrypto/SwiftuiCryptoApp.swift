@@ -13,7 +13,8 @@ struct SwiftuiCryptoApp: App {
         WindowGroup {
             NavigationView {
                 HomeView()
-            }.navigationBarHidden(true)
+                    .navigationBarHidden(true)
+            }
         }
     }
 }

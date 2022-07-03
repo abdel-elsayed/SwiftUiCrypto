@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     
-    @State private var isProfileView = false
+    @State private var isProfileView = true
     
     var body: some View {
         
@@ -21,27 +21,7 @@ struct HomeView: View {
             
             // content layer
             VStack {
-                HStack {
-                    CircleViewButton(iconName: isProfileView ? "plus" :"info")
-                        .onTapGesture {
-                             
-                        }
-                    
-                    Spacer()
-                    
-                    Text(isProfileView ?  "Pesonal Account" : "Live Prices")
-                        .font(.headline)
-                        .fontWeight(.heavy)
-                    
-                    Spacer()
-                    
-                    CircleViewButton(iconName: "chevron.right")
-                        .onTapGesture {
-                            isProfileView.toggle()
-                        }.rotationEffect(Angle(degrees: isProfileView ? 180 : 0 ))
-                }
-                .padding()
-                
+               homeHeader
                 Spacer(minLength: 0)
             }
         }
@@ -55,5 +35,33 @@ struct HomeView_Previews: PreviewProvider {
                 .navigationBarHidden(true)
         }
        
+    }
+}
+
+extension HomeView {
+    private var homeHeader: some View {
+        HStack {
+            CircleViewButton(iconName: isProfileView ? "plus" :"info")
+                .background(
+                    CircleAnimationButton(animate: $isProfileView)
+                )
+                .onTapGesture {
+                     
+                }
+            
+            Spacer()
+            
+            Text(isProfileView ?  "Pesonal Account" : "Live Prices")
+                .font(.headline)
+                .fontWeight(.heavy)
+            
+            Spacer()
+            
+            CircleViewButton(iconName: "chevron.right")
+                .onTapGesture {
+                    isProfileView.toggle()
+                }.rotationEffect(Angle(degrees: isProfileView ? 180 : 0 ))
+        }
+        .padding()
     }
 }
