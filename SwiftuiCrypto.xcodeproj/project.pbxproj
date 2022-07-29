@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E4C0C3B28934FE0002BEE4F /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4C0C3A28934FE0002BEE4F /* HomeViewModel.swift */; };
 		8E752779285E2A2800970B33 /* SwiftuiCryptoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E752778285E2A2800970B33 /* SwiftuiCryptoApp.swift */; };
 		8E75277B285E2A2800970B33 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E75277A285E2A2800970B33 /* ContentView.swift */; };
 		8E75277D285E2A2B00970B33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E75277C285E2A2B00970B33 /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8E4C0C3A28934FE0002BEE4F /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		8E752775285E2A2800970B33 /* Crypto Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Crypto Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E752778285E2A2800970B33 /* SwiftuiCryptoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftuiCryptoApp.swift; sourceTree = "<group>"; };
 		8E75277A285E2A2800970B33 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 		8E75278C285E38D300970B33 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				8E4C0C3A28934FE0002BEE4F /* HomeViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E9BD51B287203A400754FD7 /* CoinRowView.swift in Sources */,
+				8E4C0C3B28934FE0002BEE4F /* HomeViewModel.swift in Sources */,
 				8E75277B285E2A2800970B33 /* ContentView.swift in Sources */,
 				8E75278E285E38E900970B33 /* HomeView.swift in Sources */,
 				8E752794285EE0B200970B33 /* CircleAnimationButton.swift in Sources */,

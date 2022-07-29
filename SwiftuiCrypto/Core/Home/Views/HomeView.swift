@@ -8,11 +8,10 @@
 import SwiftUI
 
 struct HomeView: View {
-    
+    @EnvironmentObject private var vm: HomeViewModel
     @State private var isProfileView = true
     
     var body: some View {
-        
         ZStack {
             
             // background layer
@@ -22,8 +21,21 @@ struct HomeView: View {
             // content layer
             VStack {
                homeHeader
+                
+               columnTitles
+                
+                if !isProfileView {
+                    allCoinsList
+                    .transition(AnyTransition.asymmetric(insertion: .move(edge: .leading),
+                                                         removal: .move(edge: .trailing)))
+                } else {
+                    portofolioList
+                    .transition(AnyTransition.asymmetric(insertion: .move(edge: .trailing),
+                                                         removal: .move(edge: .leading)))
+                }
+              
                 Spacer(minLength: 0)
-            }
+            }.animation(.easeIn, value: isProfileView)
         }
     }
 }
@@ -34,6 +46,7 @@ struct HomeView_Previews: PreviewProvider {
             HomeView()
                 .navigationBarHidden(true)
         }
+        .environmentObject(dev.homeVM)
        
     }
 }
@@ -63,5 +76,43 @@ extension HomeView {
                 }.rotationEffect(Angle(degrees: isProfileView ? 180 : 0 ))
         }
         .padding()
+    }
+    
+    private var allCoinsList: some View {
+        List {
+            ForEach(vm.allCoins) { coin in
+                CoinRowView(coin: coin,
+                            showHoldingColumn: false)
+                .listRowInsets(.init(top: 0, leading: 10, bottom: 0, trailing: 10))
+            }
+        }
+        .listStyle(PlainListStyle())
+    }
+    
+    private var portofolioList: some View {
+        List {
+            ForEach(vm.portofolioCoins) { coin in
+                CoinRowView(coin: coin,
+                            showHoldingColumn: false)
+                .listRowInsets(.init(top: 0, leading: 10, bottom: 0, trailing: 10))
+            }
+        }
+        .listStyle(PlainListStyle())
+    }
+    
+    private var columnTitles: some View {
+        HStack {
+            Text("Coins")
+            Spacer()
+            
+            if isProfileView {
+                Text("Holdings")
+            }
+            Text("Price")
+                .frame(width: UIScreen.main.bounds.width / 3.5, alignment: .trailing)
+        }
+        .font(.caption)
+        .foregroundColor(Color.theme.secondaryText)
+        .padding(.horizontal)
     }
 }
